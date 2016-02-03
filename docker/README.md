@@ -1,15 +1,11 @@
 
-## build image
+## run server
 
-sudo docker build -t uryyyyyyy/centosRedis:3.0 .
+/opt/couchbase/bin/couchbase-server start
 
-## run container(server)
+set admin pass and settings in GUI
+`http://172.17.0.2:8091/index.html`
 
-sudo docker run -i --name redis -p 6379:6379 -t uryyyyyyy/centosRedis:3.0
+## cli
 
-## run container(client)
-
-```
-sudo docker run -i --name cauch -t uryyyyyyy/centos7_couchbase
-$ /etc/init.d/couchbase-server start
-```
+/opt/couchbase/bin/couchbase-cli
